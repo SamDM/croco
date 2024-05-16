@@ -30,26 +30,27 @@ Some components for stereo matching and optical flow are based on code from [uni
 
 ## Preparation
 
-Before making venv:
+Before making a `venv`:
 
-```
-sudo apt-get install python3.11-dev
-```
+1. Make sure you have `CUDA >= 12.1` compatible NVIDIA driver installation (verify with the `nvidia-smi` command).
+2. Make sure you have python `3.11` dev tools installed:
+   ```
+   sudo apt install build-essential software-properties-common -y
+   sudo add-apt-repository ppa:deadsnakes/ppa
+   sudo apt update
+   sudo apt-get install python3.11-dev
+   ```
 
-1. Install dependencies on a machine with a NVidia GPU using e.g. conda. Note that `habitat-sim` is required only for the interactive demo and the synthetic pre-training data generation. If you don't plan to use it, you can ignore the line installing it and use a more recent python version.
+1. Install dependencies on a machine with poetry:
+Note that an additional package: `habitat-sim` is required only for the interactive demo and the synthetic pre-training data generation.
 
 ```bash
-conda create -n croco python=3.7 cmake=3.14.0
-conda activate croco
-conda install habitat-sim headless -c conda-forge -c aihabitat
-conda install pytorch torchvision -c pytorch
-conda install notebook ipykernel matplotlib
-conda install ipywidgets widgetsnbextension
-conda install scikit-learn tqdm quaternion opencv # only for pretraining / habitat data generation
-
+poetry install
 ```
 
 2. Compile cuda kernels for RoPE
+
+TODO: integrate in poetry `build.py` system.
 
 CroCo v2 relies on RoPE positional embeddings for which you need to compile some cuda kernels.
 ```bash
