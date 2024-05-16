@@ -51,6 +51,7 @@ poetry install
 2. Compile cuda kernels for RoPE
 
 TODO: integrate in poetry `build.py` system.
+See: <https://github.com/python-poetry/poetry/issues/2740#issuecomment-1668981210>
 
 CroCo v2 relies on RoPE positional embeddings for which you need to compile some cuda kernels.
 ```bash
