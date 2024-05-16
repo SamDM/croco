@@ -10,9 +10,8 @@ import sys
 from typing import Iterable
 import numpy as np
 import torch
-import torchvision
 
-from utils import misc as misc
+from croco.utils import misc
 
 
 def split_prediction_conf(predictions, with_conf=False):

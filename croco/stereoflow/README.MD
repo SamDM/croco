@@ -5,11 +5,17 @@ All commands should be launched from the root directory.
 
 ### Simple inference example
 
-We provide a simple inference exemple for CroCo-Stereo and CroCo-Flow in the Totebook `croco-stereo-flow-demo.ipynb`.
+We provide a simple inference exemple for CroCo-Stereo and CroCo-Flow in the notebook `croco-stereo-flow-demo.ipynb`.
 Before running it, please download the trained models with:
-```
-bash stereoflow/download_model.sh crocostereo.pth
-bash stereoflow/download_model.sh crocoflow.pth
+
+- <https://download.europe.naverlabs.com/ComputerVision/CroCo/StereoFlow_models/crocostereo.pth>
+- <https://download.europe.naverlabs.com/ComputerVision/CroCo/StereoFlow_models/crocoflow.pth>
+
+```bash
+CROCO_ROOT_DPATH=$(git rev-parse --show-toplevel)
+CROCO_STEREOFLOW_BASE_URL='https://download.europe.naverlabs.com/ComputerVision/CroCo/StereoFlow_models'
+wget "${CROCO_STEREOFLOW_BASE_URL}/crocostereo.pth" -P "${CROCO_ROOT_DPATH}/checkpoints/"
+wget "${CROCO_STEREOFLOW_BASE_URL}/crocoflow.pth" -P "${CROCO_ROOT_DPATH}/checkpoints/"
 ```
 
 ### Prepare data for training or evaluation
