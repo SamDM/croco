@@ -1,4 +1,6 @@
-/build/*
-/dist/*
-*.so
 *.o
+*.so
+/build/*
+/checkpoints/*
+/demo/outputs/*
+/dist/*
