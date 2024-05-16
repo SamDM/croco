@@ -30,6 +30,12 @@ Some components for stereo matching and optical flow are based on code from [uni
 
 ## Preparation
 
+Before making venv:
+
+```
+sudo apt-get install python3.11-dev
+```
+
 1. Install dependencies on a machine with a NVidia GPU using e.g. conda. Note that `habitat-sim` is required only for the interactive demo and the synthetic pre-training data generation. If you don't plan to use it, you can ignore the line installing it and use a more recent python version.
 
 ```bash

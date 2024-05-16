@@ -17,6 +17,7 @@ scikit-learn = "^1.4.2"
 tqdm = "^4.66.4"
 quaternion = "^3.5.2.post4"
 opencv-python = "^4.9.0.80"
+cmake = "^3.29.3"
 
 
 [build-system]
